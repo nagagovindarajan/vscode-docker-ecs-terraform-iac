@@ -18,6 +18,22 @@ The following components will be provisioned in this setup:
 - Application Load Balancer (ALB) with HTTPS listener for secure access
 - Visual Studio Code with necessary extensions for database exploration
 
+## VSCode Web
+
+<img width="1234" alt="vscode1" src="https://github.com/nagarajyadava/vscode-docker-ecs-terraform-iac/assets/2870679/591d3bdb-e1f4-4fc0-9e86-1f62fedc7d06">
+
+## SSH
+
+<img width="807" alt="vs2" src="https://github.com/nagarajyadava/vscode-docker-ecs-terraform-iac/assets/2870679/bc437624-54c4-4ad7-aa3b-ae57ba3a8cce">
+
+## DB Explorer
+
+<img width="1280" alt="Screenshot 2023-07-21 180356" src="https://github.com/nagarajyadava/vscode-docker-ecs-terraform-iac/assets/2870679/e93630d2-73e0-4dde-8375-6f8adfe6f002">
+
+## Jupyter Notebook
+
+<img width="1280" alt="vs3" src="https://github.com/nagarajyadava/vscode-docker-ecs-terraform-iac/assets/2870679/03194f4a-dddd-47a6-9679-91e53cd567af">
+
 ## Getting Started
 
 To get started with running VSCode Server in ECS follow these steps:
