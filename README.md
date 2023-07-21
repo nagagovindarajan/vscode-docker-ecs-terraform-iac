@@ -7,7 +7,6 @@ This guide will walk you through the process of running Visual Studio Code Serve
 Before you begin, ensure you have the following prerequisites:
 
 - An AWS account with appropriate permissions
-- Docker installed on your local machine
 - AWS CLI installed and configured with your AWS credentials
 - Terraform installed on your local machine (for infrastructure provisioning)
 
@@ -17,27 +16,43 @@ The following components will be provisioned in this setup:
 
 - ECS cluster and task definition for VSCode Server container
 - Application Load Balancer (ALB) with HTTPS listener for secure access
-- SSH access to private subnet instances using Session Manager
 - Visual Studio Code with necessary extensions for database exploration
 
 ## Getting Started
 
-To get started with running VSCode Server in ECS and accessing private subnet instances, follow these steps:
+To get started with running VSCode Server in ECS follow these steps:
 
 ### Step 1: Clone the Repository
 
 Clone this repository to your local machine:
 
+### Step 2: Update Variables
 
-Terraform will create the necessary AWS resources, including the ECS cluster, task definition, ALB, security groups, and IAM roles.
+Open the `vars.tf` file and update the variables as per your requirements. Adjust any other variables if needed.
+
+### Step 3: Provision Infrastructure
+
+Initialize Terraform in the repository directory:
+
+terraform init
+
+Review the planned infrastructure changes:
+
+terraform plan
+
+If the plan looks good, apply the changes:
+
+terraform apply
 
 ### Step 4: Access VSCode Server
+
+Terraform will create the necessary AWS resources, including the ECS cluster, task definition, ALB, security groups, route53 records, acm, cloudwatch, vpc, nat and IAM roles.
 
 Once the Terraform apply is successful, you can access the VSCode Server by opening the ALB DNS name provided in the Terraform output. The URL should be in the format `https://<alb-dns-name>`. This will take you to the VSCode Server web interface.
 
 ### Step 5: SSH Access to Private Subnet Instances
 
-To access private subnet instances, we will use AWS Systems Manager Session Manager for SSH access. Follow the AWS documentation to configure Session Manager and grant necessary IAM permissions to your instances.
+To access private subnet instances, open terminal in vscode and use ssh commands.
 
 ### Step 6: Explore Private Subnet Databases
 
